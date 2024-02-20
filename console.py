@@ -125,7 +125,7 @@ class HBNBCommand(cmd.Cmd):
         kwargs = dict()
         for arg in args_list[1:]:
             val_key = arg.split("=")
-            val_key[1] = val_key[1].replace("_", " ").replace('"', '\\"')
+            val_key[1] = eval(val_key[1].replace("_", " ").replace('"', '\\"'))
             kwargs[val_key[0]] = val_key[1]
         new_instance = HBNBCommand.classes[args_list[0]](**kwargs)
         storage.save()
