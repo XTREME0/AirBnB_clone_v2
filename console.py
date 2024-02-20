@@ -129,9 +129,8 @@ class HBNBCommand(cmd.Cmd):
                 val_key[1] = val_key[1].replace("_", " ").replace('"', '\\"')
             kwargs[val_key[0]] = val_key[1]
         new_instance = HBNBCommand.classes[args_list[0]](**kwargs)
-        storage.save()
+        new_instance.save()
         print(new_instance.id)
-        storage.save()
 
     def help_create(self):
         """ Help information for the create method """
