@@ -130,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
             kwargs[val_key[0]] = val_key[1]
         new_instance = HBNBCommand.classes[args_list[0]](**kwargs)
         new_instance.save()
-        print(new_instance.id)
+        print(new_instance)
 
     def help_create(self):
         """ Help information for the create method """
