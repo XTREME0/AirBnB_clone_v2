@@ -6,7 +6,13 @@ sudo apt-get -y install nginx
 sudo mkdir -p /data/web_static/releases/test/
 sudo mkdir -p /data/web_static/shared/
 
-echo "<html><head></head><body>Hello</body></html>" | sudo tee /data/web_static/releases/test/index.html
+echo "<html>
+	<head>
+	</head>
+	<body>
+		Hello
+	</body>
+      </html>" | sudo tee /data/web_static/releases/test/index.html
 
 sudo ln -sf /data/web_static/releases/test/ /data/web_static/current
 
