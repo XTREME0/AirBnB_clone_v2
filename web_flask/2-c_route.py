@@ -30,7 +30,7 @@ def c(text):
     print text
     """
     x = text.replace('_', ' ')
-    return "C" + x
+    return "C " + x
 
 
 if __name__ == '__main__':
