@@ -72,7 +72,7 @@ def oddOrEven(n):
     """
     is odd or even
     """
-    return render_template('6-number_odd_or_even.html', typ= "even" if n % 2 == 0 else "odd")
+    return render_template('6-number_odd_or_even.html', num=n, typ= "even" if n % 2 == 0 else "odd")
 
 
 if __name__ == '__main__':
